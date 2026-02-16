@@ -66,7 +66,7 @@ body {
     margin: 0 auto;
     padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -419,4 +419,95 @@ body {
     justify-content: center;
     gap: 0.5rem;
     margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .glass-header {
+        padding: 2rem 1rem;
+    }
+
+    .glass-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        /* Full width on small screens */
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .filter-container {
+        gap: 0.5rem;
+    }
+
+    .filter-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .sort-container {
+        width: 100%;
+    }
+
+    .sort-select {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .puzzle-card:hover {
+        transform: none;
+        /* Disable hover lift on touch devices */
+    }
+
+    /* Modal Mobile */
+    .modal-content {
+        padding: 1.5rem;
+        width: 95%;
+        max-height: 85vh;
+        overflow-y: auto;
+        /* Allow scrolling if content is tall */
+    }
+
+    .carousel-control {
+        padding: 0.5rem;
+        font-size: 1.5rem;
+    }
+
+    .prev {
+        left: 5px;
+    }
+
+    .next {
+        right: 5px;
+    }
+
+    .close-button {
+        top: 0.5rem;
+        right: 1rem;
+        font-size: 1.8rem;
+        z-index: 20;
+        /* Ensure above image */
+        background: rgba(0, 0, 0, 0.5);
+        /* Background for visibility */
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-image {
+        max-height: 40vh;
+        /* Smaller image on mobile */
+    }
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        /* 2 columns on tablets */
+    }
 }
