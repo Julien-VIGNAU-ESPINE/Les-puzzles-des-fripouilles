@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Puzzles des Fripouilles</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-gradient"></div>
+
+    <header class="glass-header">
+        <h1>Les Puzzles des Fripouilles</h1>
+        <p>Une collection de patience et de beauté</p>
+        <div id="filter-container" class="filter-container">
+            <!-- Filter buttons injected via JS -->
+        </div>
+        <div class="sort-container">
+            <select id="sort-select" class="sort-select">
+                <option value="date-desc">Date (Récent &#8594; Ancien)</option>
+                <option value="date-asc">Date (Ancien &#8594; Récent)</option>
+                <option value="pieces-desc">Pièces (Grand &#8594; Petit)</option>
+                <option value="pieces-asc">Pièces (Petit &#8594; Grand)</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="gallery-container" id="gallery">
+        <!-- Puzzles will be injected here via JS -->
+    </main>
+
+    <div id="modal" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close-button">&times;</span>
+            <div class="carousel-container">
+                <button id="prev-btn" class="carousel-control prev">&lt;</button>
+                <img id="modal-image" src="" alt="Puzzle Detail">
+                <button id="next-btn" class="carousel-control next">&gt;</button>
+            </div>
+            <div id="carousel-dots" class="carousel-dots"></div>
+            <h2 id="modal-title"></h2>
+            <div id="modal-tags" class="modal-tags"></div>
+            <p id="modal-desc"></p>
+        </div>
+    </div>
+
+    <footer class="glass-footer">
+        <p>Fait avec ❤️ pour les amateurs de puzzles</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
